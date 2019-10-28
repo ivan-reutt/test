@@ -1,0 +1,149 @@
+.modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  &__request {
+    border: 2px solid #fee05c;
+    padding: 50px 40px;
+    background-color: #fff;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 380px;
+  }
+
+  &__input,
+  &__textarea {
+    border: 1px solid #d0d0d0;
+    margin-bottom: 20px;
+    height: 45px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: 700;
+
+    &::placeholder {
+      opacity: 0.3;
+    }
+  }
+
+  &__textarea {
+    height: 105px;
+    resize: none;
+  }
+
+  &__rooms {
+    margin-bottom: 20px;
+  }
+
+  &__input_check {
+    display: none;
+  }
+
+  &__rooms_number {
+    height: 23px;
+    width: 23px;
+    display: inline-block;
+    border: 1px solid #d0d0d0;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    text-align: center;
+    line-height: 23px;
+    color: #c1c1c1;
+    transition: all .2s;
+    margin-left: 12px;
+  }
+
+  &__rooms_title {
+    font-size: 16px;
+    line-height: 15px;
+    color: #000;
+    font-weight: 700;
+    margin-right: 20px;
+  }
+
+  label input[type="checkbox"]:checked + .modal__rooms_number {
+    background: #fee05c;
+    color: #0d0d0d;
+    border-color: transparent;
+  }
+
+  &__btn {
+    border: none;
+    line-height: 48px;
+    font-size: 14px;
+    color: #2d2c2c;
+    font-weight: 700;
+    background-color: #fee05c;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .close {
+    font-size: 50px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #2d2c2c;
+    text-decoration: none;
+    position: absolute;
+    right: -15px;
+    top: -28px;
+    z-index: 10;
+    cursor: pointer;
+
+    i {
+      position: relative;
+      z-index: 12;
+
+      &.fa-angle-right {
+        margin-right: -5px;
+      }
+
+      &.fa-angle-left {
+        margin-left: -3px;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 26px;
+      right: -64px;
+      border: 78px solid transparent;
+      border-top-color: #fee05c;
+      z-index: 9;
+    }
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: -64px;
+      top: -130px;
+      border: 78px solid transparent;
+      border-bottom-color: #fee05c;
+      z-index: 9;
+    }
+  }
+
+  &.active {
+    display: flex;
+  }
+}

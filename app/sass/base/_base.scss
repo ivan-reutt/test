@@ -1,0 +1,47 @@
+/**********************
+* Base style
+**********************/
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #fff;
+  font-family: 'AkzidenzGroteskPro', sans-serif;
+  font-size: 10px;
+  color: #000;
+  font-weight: 400;
+  min-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+br {
+  font-size: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
