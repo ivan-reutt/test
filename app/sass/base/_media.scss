@@ -92,6 +92,19 @@
 
 }
 
+/***************************** MIN-WIDTH ************************************/
+@media only screen and (min-width : 768px) {
+  .nav__item:hover .submenu {
+    display: block;
+  }
+
+  .nav__link_sub:hover::after {
+    content: '\f106';
+  }
+
+
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
@@ -220,6 +233,7 @@
     top: 0;
   }
 
+
   .slider .owl-carousel .owl-item.center,
   .slider .owl-carousel .owl-item {
     height: 300px;
@@ -310,6 +324,15 @@
 
   .collapse__item {
     height: 120px;
+  }
+
+  .collapse__title {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .collapse__date {
+    font-size: 12px;
   }
 
   .footer__dev {

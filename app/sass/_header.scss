@@ -110,10 +110,6 @@
   &__item {
     width: 100%;
     position: relative;
-
-    &:hover .submenu {
-      display: block;
-    }
   }
 
   &__link {
@@ -152,14 +148,12 @@
         margin-left: 20px;
       }
 
-      &:hover::after {
+      &.active::after {
         content: '\f106';
       }
     }
 
-
     &:hover {
-
       font-weight: 700;
       color: #3d3d3d;
 
@@ -167,7 +161,6 @@
         opacity: 1;
       }
     }
-
   }
 
   .submenu {
@@ -180,6 +173,10 @@
     padding: 15px 0;
     border-bottom: 1px solid #fff6ce;
     display: none;
+
+    &.active {
+      display: block;
+    }
 
     &__link {
       font-size: 14px;

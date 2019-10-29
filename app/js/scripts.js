@@ -16,6 +16,12 @@ $(document).ready(function () {
     $('body').toggleClass('fixed');
   })
 
+  $('.nav__link_sub').on('click', function (e) {
+    e.preventDefault();
+    $('.submenu').toggleClass('active');
+    $('.nav__link_sub').toggleClass('active');
+  })
+
 
   window.addEventListener("keydown", function (e) {
     if (e.keyCode === 27 && $('body').hasClass('fixed') && $('.modal').hasClass('active')) {

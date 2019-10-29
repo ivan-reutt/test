@@ -77,7 +77,7 @@ function clean() {
 ////
 function cssLibs() {
   return gulp.src([
-      'app/css/font-awesome.min.css',
+      'app/fonts/font-awesome/css/font-awesome.min.css',
       'app/css/jquery.fancybox.min.css',
       'app/css/owl.carousel.min.css'
   ]) // Сюда добавляем сss библиотеки
@@ -106,8 +106,8 @@ function code() {
 };
 
 function fonts() {
-  return gulp.src('app/fonts')
-    .pipe(gulp.dest('dist/'))
+  return gulp.src('app/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts'))
 };
 
 //
